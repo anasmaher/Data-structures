@@ -1,8 +1,8 @@
 def bfs(graph, node):
-    visited = []  # List to keep track of visited nodes.
+    visited = {}  # hashing to keep track of visited nodes.
     queue = []
-    
-    visited.append(node)
+
+    visited[node] = 1
     queue.append(node)
 
     while queue:
@@ -11,7 +11,7 @@ def bfs(graph, node):
 
         for neighbour in graph[s]:
             if neighbour not in visited:
-                visited.append(neighbour)
+                visited[neighbour] = 1
                 queue.append(neighbour)
 
 # O(V+E)
