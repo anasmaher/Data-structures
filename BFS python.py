@@ -1,4 +1,4 @@
-def bfs(visited, graph, node):
+def bfs(graph, node):
     visited = [] # List to keep track of visited nodes.
     queue = []
 
@@ -14,7 +14,7 @@ def bfs(visited, graph, node):
                 visited.append(neighbour)
                 queue.append(neighbour)
 
-bfs(visited, graph, 'A')
+bfs(graph, 'A')
 
 # O(V+E)
 # V = number of vertices
