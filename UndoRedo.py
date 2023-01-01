@@ -30,6 +30,12 @@ class Stack:
         for i in range(self.size-1, -1, -1):
             print(self.elements[i], end=" ")
 
+    def printStackReversed(self):
+        if not self.size:
+            return "Stack is empty"
+        for i in range(self.size):
+            print(self.elements[i], end=" ")
+
 # Undo Redo using stack
 
 def ur():
@@ -50,7 +56,7 @@ def ur():
             else:
                 undo.push(redo.pop())
         elif val == "p":
-            undo.printStack()
+            undo.printStackReversed()
         elif val == "e":
             break
         else:
